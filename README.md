@@ -1,27 +1,18 @@
-# German-streams (Nuvio plugin repository)
+# German Streams / Media Directory
 
-**Manifest URL:** https://raw.githubusercontent.com/h97667611-dotcom/German-streams/main/manifest.json
-
-## Install
-1. Use a Nuvio build that supports JavaScript plugins (sideloaded builds may be required; app-store builds may not support plugins).
-2. In Nuvio open **Settings → Content & Discovery → Plugins** (not Addons).
-3. Add the manifest URL above, refresh, and check the repository status.
-4. The provider is currently **disabled** because this repository does not yet have a verified, authorized direct-stream API. Enable it only for testing; it returns no stream candidates.
-
-## Why the earlier 404/error
-The previous manifest was a custom object with a `scrapers` field, rather than Nuvio's current provider manifest format. Nuvio's plugin manifest expects a JSON array of provider objects, each with `id`, `name`, `filename`, and `supportedTypes`. This repository now uses that format and a root-level provider file.
-
-If Nuvio still reports HTTP 404, verify that the app is using this exact raw URL:
-`https://raw.githubusercontent.com/h97667611-dotcom/German-streams/main/manifest.json`
-A plugin repo must be installed under Plugins, not Addons. The installed app version must support plugins.
-
-## Source directory
-See [catalog/german-sources.json](catalog/german-sources.json) for a curated directory of official German public-service, educational, documentary, audio, and anime sources. This directory is not a scraper and does not provide stream URLs.
+This repository contains a curated directory of German-language media sources and references. It is **not** a stream resolver or scraper.
 
 ## Scope
-This repository does not scrape or resolve unauthorized streaming pages, bypass paywalls/access controls, or extract protected video URLs. Anime and video playback can only be added when a source provides an authorized API or direct playback endpoint and the provider can be tested against Nuvio's current runtime.
+- Official/public-service and educational sources are listed for discovery.
+- Third-party streaming, download, and index sites are listed as reference links only. Their legality, safety, current status, and licensing are not verified.
+- No copyrighted stream extraction, scraping, downloading, or playback integration is implemented.
+- The Nuvio provider remains disabled and returns no streams. This catalog is not a working streaming plugin.
 
-## Developer reference
-- [Nuvio provider template](https://github.com/yoruix/nuvio-providers)
-- [Nuvio plugin guide](https://nuvio-wiki.duckdns.org/integrations/plugins)
-- [FMHY German / Deutsch directory](https://github.com/fmhy/FMHY/wiki/Non-Eng)
+## Catalog
+See [`catalog/german-sources.json`](catalog/german-sources.json) for the expanded directory, categories, links, and notes.
+
+## Nuvio
+The manifest uses the provider-array format. Install from Nuvio's Plugins section only if your app build supports plugins. The provider is intentionally disabled and does not return playback URLs.
+
+## Legal / safety
+Use official sources where possible. Confirm that content is authorized for your region and that third-party pages comply with applicable law. This project does not endorse piracy or unsafe downloads.

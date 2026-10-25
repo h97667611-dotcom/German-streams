@@ -1,20 +1,510 @@
 {
-  "name": "German official media directory",
+  "name": "German media and streaming directory",
   "updated": "2026-10-25",
-  "policy": "Only official, public-service, educational, or otherwise authorized sources are listed. This file is a directory, not a stream resolver.",
+  "policy": "Directory of official, public-service, educational, community, and other sources. This is a directory, not a stream resolver. Third-party sites are listed for reference only; verify legality, rights, safety, and availability in your jurisdiction before use. No scraping or copyrighted stream extraction is implemented.",
   "sources": [
-    {"id":"ard","name":"ARD Mediathek","category":"public-broadcast","url":"https://www.ardmediathek.de/","languages":["de"],"anime":"Occasional anime/animation; catalog varies"},
-    {"id":"zdf","name":"ZDF","category":"public-broadcast","url":"https://www.zdf.de/","languages":["de"],"anime":"Occasional anime/animation; catalog varies"},
-    {"id":"toggo","name":"TOGGO","category":"children","url":"https://www.toggo.de/","languages":["de"],"anime":"Animation and children's programming"},
-    {"id":"mediathekview","name":"MediathekView","category":"public-broadcast-tool","url":"https://mediathekview.de/","languages":["de"],"note":"Tool for searching public broadcaster media; use official broadcaster availability"},
-    {"id":"mediathekviewweb","name":"MediathekViewWeb","category":"public-broadcast-search","url":"https://mediathekviewweb.de/","languages":["de"],"note":"Search interface for public broadcaster libraries"},
-    {"id":"dctp","name":"dctp.tv","category":"documentary","url":"https://www.dctp.tv/","languages":["de"]},
-    {"id":"dokustreams","name":"Dokustreams","category":"documentary","url":"https://dokustreams.de/","languages":["de"],"note":"Check each item's rights and source before use"},
-    {"id":"stiftung-imai","name":"Stiftung imai","category":"video-archive","url":"https://www.imai.de/","languages":["de"]},
-    {"id":"studyflix","name":"Studyflix","category":"education","url":"https://studyflix.de/","languages":["de"]},
-    {"id":"hoerspielprojekt","name":"Hörspielprojekt","category":"audio","url":"https://www.hoerspielprojekt.de/","languages":["de"]},
-    {"id":"dw","name":"Deutsche Welle","category":"public-broadcast-education","url":"https://www.dw.com/de/","languages":["de","en"]},
-    {"id":"crunchyroll","name":"Crunchyroll","category":"anime-official","url":"https://www.crunchyroll.com/","languages":["de","ja"],"note":"Official anime service; availability and subscription vary"},
-    {"id":"anime-on-demand","name":"Anime on Demand / Crunchyroll","category":"anime-official","url":"https://www.crunchyroll.com/","languages":["de"],"note":"Anime on Demand was consolidated into Crunchyroll; use current official service"}
+    {
+      "id": "ard",
+      "name": "ARD Mediathek",
+      "category": "public-broadcast",
+      "url": "https://www.ardmediathek.de/",
+      "languages": [
+        "de"
+      ]
+    },
+    {
+      "id": "zdf",
+      "name": "ZDF",
+      "category": "public-broadcast",
+      "url": "https://www.zdf.de/",
+      "languages": [
+        "de"
+      ]
+    },
+    {
+      "id": "toggo",
+      "name": "TOGGO",
+      "category": "children",
+      "url": "https://www.toggo.de/",
+      "languages": [
+        "de"
+      ]
+    },
+    {
+      "id": "mediathekview",
+      "name": "MediathekView",
+      "category": "public-broadcast-tool",
+      "url": "https://mediathekview.de/",
+      "languages": [
+        "de"
+      ],
+      "note": "Tool for searching public broadcaster media; use official availability."
+    },
+    {
+      "id": "mediathekviewweb",
+      "name": "MediathekViewWeb",
+      "category": "public-broadcast-search",
+      "url": "https://mediathekviewweb.de/",
+      "languages": [
+        "de"
+      ]
+    },
+    {
+      "id": "dctp",
+      "name": "dctp.tv",
+      "category": "documentary",
+      "url": "https://www.dctp.tv/",
+      "languages": [
+        "de"
+      ]
+    },
+    {
+      "id": "dokustreams",
+      "name": "Dokustreams",
+      "category": "documentary",
+      "url": "https://dokustreams.de/",
+      "languages": [
+        "de"
+      ],
+      "note": "Check rights and source before use."
+    },
+    {
+      "id": "stiftung-imai",
+      "name": "Stiftung imai",
+      "category": "video-archive",
+      "url": "https://www.imai.de/",
+      "languages": [
+        "de"
+      ]
+    },
+    {
+      "id": "studyflix",
+      "name": "Studyflix",
+      "category": "education",
+      "url": "https://studyflix.de/",
+      "languages": [
+        "de"
+      ]
+    },
+    {
+      "id": "hoerspielprojekt",
+      "name": "Hörspielprojekt",
+      "category": "audio",
+      "url": "https://www.hoerspielprojekt.de/",
+      "languages": [
+        "de"
+      ]
+    },
+    {
+      "id": "dw",
+      "name": "Deutsche Welle",
+      "category": "public-broadcast-education",
+      "url": "https://www.dw.com/de/",
+      "languages": [
+        "de",
+        "en"
+      ]
+    },
+    {
+      "id": "crunchyroll",
+      "name": "Crunchyroll",
+      "category": "anime-official",
+      "url": "https://www.crunchyroll.com/",
+      "languages": [
+        "de",
+        "ja"
+      ],
+      "note": "Official anime service; availability and subscription vary."
+    },
+    {
+      "id": "anime-on-demand",
+      "name": "Anime on Demand / Crunchyroll",
+      "category": "anime-official",
+      "url": "https://www.crunchyroll.com/",
+      "languages": [
+        "de"
+      ],
+      "note": "Anime on Demand was consolidated into Crunchyroll; use current official service."
+    },
+    {
+      "id": "srf",
+      "name": "SRF",
+      "category": "public-broadcast",
+      "url": "https://www.srf.ch/",
+      "languages": [
+        "de"
+      ]
+    },
+    {
+      "id": "zapp",
+      "name": "Zapp",
+      "category": "public-broadcast-tool",
+      "url": "https://www.zapp.tv/",
+      "languages": [
+        "de"
+      ],
+      "note": "Check current project availability and official source."
+    },
+    {
+      "id": "live-tv",
+      "name": "LiveTV",
+      "category": "live-tv-directory",
+      "url": "https://livetv.sx/",
+      "languages": [
+        "de"
+      ],
+      "note": "Third-party sports/live-TV directory; listed for reference only, not integrated. Verify rights."
+    },
+    {
+      "id": "livestream",
+      "name": "Livestream",
+      "category": "live-stream-directory",
+      "url": "https://www.livestream.com/",
+      "languages": [
+        "de",
+        "en"
+      ],
+      "note": "Platform and availability may vary."
+    },
+    {
+      "id": "2ix2",
+      "name": "2ix2",
+      "category": "streaming-reference",
+      "url": "https://2ix2.com/",
+      "languages": [
+        "de"
+      ],
+      "note": "Third-party listing only; not integrated or verified for licensing."
+    },
+    {
+      "id": "crawli",
+      "name": "Crawli",
+      "category": "third-party-index",
+      "url": "https://crawli.de/",
+      "languages": [
+        "de"
+      ],
+      "note": "Reference listing only; legality and current status not verified."
+    },
+    {
+      "id": "darklight",
+      "name": "DarkLight",
+      "category": "third-party-index",
+      "url": "https://darklight.to/",
+      "languages": [
+        "de"
+      ],
+      "note": "Reference listing only; legality and current status not verified."
+    },
+    {
+      "id": "goldesel",
+      "name": "Goldesel",
+      "category": "third-party-index",
+      "url": "https://goldesel.to/",
+      "languages": [
+        "de"
+      ],
+      "note": "Reference listing only; no downloads or scraping implemented."
+    },
+    {
+      "id": "boerse",
+      "name": "Boerse",
+      "category": "third-party-index",
+      "url": "https://www.boerse.sx/",
+      "languages": [
+        "de"
+      ],
+      "note": "Reference listing only; legality and current status not verified."
+    },
+    {
+      "id": "byte",
+      "name": "byte.to",
+      "category": "third-party-index",
+      "url": "https://byte.to/",
+      "languages": [
+        "de"
+      ],
+      "note": "Reference listing only; legality and current status not verified."
+    },
+    {
+      "id": "nima4k",
+      "name": "Nima4K",
+      "category": "third-party-index",
+      "url": "https://nima4k.org/",
+      "languages": [
+        "de"
+      ],
+      "note": "Reference listing only; legality and current status not verified."
+    },
+    {
+      "id": "filmfans",
+      "name": "FilmFans",
+      "category": "third-party-index",
+      "url": "https://filmfans.org/",
+      "languages": [
+        "de"
+      ],
+      "note": "Reference listing only; legality and current status not verified."
+    },
+    {
+      "id": "hd-source",
+      "name": "HD-Source",
+      "category": "third-party-index",
+      "url": "https://hd-source.to/",
+      "languages": [
+        "de"
+      ],
+      "note": "Reference listing only; legality and current status not verified."
+    },
+    {
+      "id": "mlcboard",
+      "name": "MLCBoard",
+      "category": "community-forum",
+      "url": "https://www.mlcboard.com/",
+      "languages": [
+        "de"
+      ],
+      "note": "Community reference; do not assume media is authorized."
+    },
+    {
+      "id": "anime-loads",
+      "name": "Anime-Loads",
+      "category": "anime-reference",
+      "url": "https://anime-loads.org/",
+      "languages": [
+        "de"
+      ],
+      "note": "Third-party anime site listed for reference only; no scraping/playback integration."
+    },
+    {
+      "id": "aniworld",
+      "name": "AniWorld",
+      "category": "anime-reference",
+      "url": "https://aniworld.to/",
+      "languages": [
+        "de"
+      ],
+      "note": "Third-party anime site listed for reference only; no scraping/playback integration."
+    },
+    {
+      "id": "fireanime",
+      "name": "FireAnime",
+      "category": "anime-app-reference",
+      "url": "https://github.com/FireAnime",
+      "languages": [
+        "de",
+        "en"
+      ],
+      "note": "Project/source reference; verify repository and licensing."
+    },
+    {
+      "id": "fireani",
+      "name": "Fireani",
+      "category": "anime-reference",
+      "url": "https://fireani.me/",
+      "languages": [
+        "de"
+      ],
+      "note": "Reference listing only; legality and current status not verified."
+    },
+    {
+      "id": "moflix",
+      "name": "Moflix",
+      "category": "third-party-streaming-reference",
+      "url": "https://moflix.to/",
+      "languages": [
+        "de"
+      ],
+      "note": "Reference only; no stream extraction or playback."
+    },
+    {
+      "id": "kinoger",
+      "name": "Kinoger",
+      "category": "third-party-streaming-reference",
+      "url": "https://kinoger.to/",
+      "languages": [
+        "de"
+      ],
+      "note": "Reference only; no stream extraction or playback."
+    },
+    {
+      "id": "sto",
+      "name": "S.TO",
+      "category": "third-party-streaming-reference",
+      "url": "https://s.to/",
+      "languages": [
+        "de"
+      ],
+      "note": "Reference only; no stream extraction or playback."
+    },
+    {
+      "id": "movie2k",
+      "name": "Movie2k",
+      "category": "third-party-streaming-reference",
+      "url": "https://movie2k.sx/",
+      "languages": [
+        "de"
+      ],
+      "note": "Reference only; no stream extraction or playback."
+    },
+    {
+      "id": "filmpalast",
+      "name": "FilmPalast",
+      "category": "third-party-streaming-reference",
+      "url": "https://filmpalast.to/",
+      "languages": [
+        "de"
+      ],
+      "note": "Reference only; no stream extraction or playback."
+    },
+    {
+      "id": "kinox",
+      "name": "KinoX",
+      "category": "third-party-streaming-reference",
+      "url": "https://kinox.to/",
+      "languages": [
+        "de"
+      ],
+      "note": "Reference only; no stream extraction or playback."
+    },
+    {
+      "id": "kinoking",
+      "name": "KinoKing",
+      "category": "third-party-streaming-reference",
+      "url": "https://kinoking.to/",
+      "languages": [
+        "de"
+      ],
+      "note": "Reference only; no stream extraction or playback."
+    },
+    {
+      "id": "flixfilmplus",
+      "name": "FlixFilmPlus",
+      "category": "third-party-streaming-reference",
+      "url": "https://flixfilmplus.com/",
+      "languages": [
+        "de"
+      ],
+      "note": "Reference only; no stream extraction or playback."
+    },
+    {
+      "id": "filmo",
+      "name": "Filmo",
+      "category": "third-party-streaming-reference",
+      "url": "https://filmo.to/",
+      "languages": [
+        "de"
+      ],
+      "note": "Reference only; no stream extraction or playback."
+    },
+    {
+      "id": "aether",
+      "name": "Aether",
+      "category": "third-party-streaming-reference",
+      "url": "https://aether.to/",
+      "languages": [
+        "de"
+      ],
+      "note": "Reference only; no stream extraction or playback."
+    },
+    {
+      "id": "megakino",
+      "name": "MegaKino",
+      "category": "third-party-streaming-reference",
+      "url": "https://megakino3.to/",
+      "languages": [
+        "de"
+      ],
+      "note": "Reference only; no stream extraction or playback."
+    },
+    {
+      "id": "streamkiste",
+      "name": "StreamKiste",
+      "category": "third-party-streaming-reference",
+      "url": "https://streamkiste.taxi/",
+      "languages": [
+        "de"
+      ],
+      "note": "Reference only; no stream extraction or playback."
+    },
+    {
+      "id": "einschalten",
+      "name": "Einschalten",
+      "category": "third-party-streaming-reference",
+      "url": "https://einschalten.in/",
+      "languages": [
+        "de"
+      ],
+      "note": "Reference only; no stream extraction or playback."
+    },
+    {
+      "id": "haschcon",
+      "name": "Haschcon",
+      "category": "third-party-streaming-reference",
+      "url": "https://haschcon.com/",
+      "languages": [
+        "de"
+      ],
+      "note": "Reference only; no stream extraction or playback."
+    },
+    {
+      "id": "burning-series",
+      "name": "Burning Series",
+      "category": "third-party-streaming-reference",
+      "url": "https://burning-series.io/",
+      "languages": [
+        "de"
+      ],
+      "note": "Reference only; no stream extraction or playback."
+    },
+    {
+      "id": "animexx",
+      "name": "Animexx",
+      "category": "anime-community",
+      "url": "https://www.animexx.de/",
+      "languages": [
+        "de"
+      ]
+    },
+    {
+      "id": "xrel",
+      "name": "xrel",
+      "category": "release-information",
+      "url": "https://www.xrel.to/",
+      "languages": [
+        "de"
+      ],
+      "note": "Release information only; no downloads."
+    },
+    {
+      "id": "wiidatabase",
+      "name": "WiiDatabase",
+      "category": "community-database",
+      "url": "https://wiidatabase.de/",
+      "languages": [
+        "de"
+      ],
+      "note": "Software/database reference; check rights and safety."
+    },
+    {
+      "id": "usenet-de",
+      "name": "Usenet DE Guide",
+      "category": "download-guide",
+      "url": "https://fmhy.net/non-english# german",
+      "languages": [
+        "de"
+      ],
+      "note": "Guide reference only; no download automation."
+    },
+    {
+      "id": "radar-sonarr-de",
+      "name": "Radarr / Sonarr DE Guide",
+      "category": "media-management-guide",
+      "url": "https://fmhy.net/non-english",
+      "languages": [
+        "de"
+      ],
+      "note": "Guide reference only; use legally obtained media."
+    }
   ]
 }
