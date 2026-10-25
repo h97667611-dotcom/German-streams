@@ -1,0 +1,1 @@
+export function validateStream(stream){try{const u=new URL(stream.url);if(!["https:","http:"].includes(u.protocol)||!(/\.(m3u8|mp4)(\?|$)/i.test(u.href)))return null;return {url:u.href,type:/\.m3u8/i.test(u.href)?"hls":"mp4",title:String(stream.title||"Video")};}catch{return null;}}
