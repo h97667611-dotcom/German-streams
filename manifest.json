@@ -1,26 +1,32 @@
-[
-  {
-    "id": "german-official-media",
-    "name": "German Official Media",
-    "description": "Legal German public-service and educational media source index. This provider currently does not resolve video streams.",
-    "version": "1.0.1",
-    "author": "German-streams",
-    "supportedTypes": [
-      "movie",
-      "tv"
-    ],
-    "filename": "providers/de-official.js",
-    "enabled": false,
-    "logo": "",
-    "contentLanguage": [
-      "de"
-    ],
-    "formats": [
-      "mp4",
-      "m3u8"
-    ],
-    "limited": true,
-    "disabledPlatforms": [],
-    "supportsExternalPlayer": false
-  }
-]
+{
+  "name": "German Streams",
+  "version": "1.0.2",
+  "author": "German-streams",
+  "description": "German-language media source directory. This provider does not resolve streams.",
+  "scrapers": [
+    {
+      "id": "german-official-media",
+      "name": "German Official Media",
+      "description": "Legal public-service and educational media directory; no stream resolver.",
+      "version": "1.0.2",
+      "author": "German-streams",
+      "supportedTypes": [
+        "movie",
+        "tv"
+      ],
+      "filename": "providers/de-official.js",
+      "enabled": false,
+      "logo": "",
+      "contentLanguage": [
+        "de"
+      ],
+      "formats": [
+        "mp4",
+        "m3u8"
+      ],
+      "limited": true,
+      "disabledPlatforms": [],
+      "supportsExternalPlayer": false
+    }
+  ]
+}
