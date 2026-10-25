@@ -1,0 +1,20 @@
+{
+  "name": "German official media directory",
+  "updated": "2026-10-25",
+  "policy": "Only official, public-service, educational, or otherwise authorized sources are listed. This file is a directory, not a stream resolver.",
+  "sources": [
+    {"id":"ard","name":"ARD Mediathek","category":"public-broadcast","url":"https://www.ardmediathek.de/","languages":["de"],"anime":"Occasional anime/animation; catalog varies"},
+    {"id":"zdf","name":"ZDF","category":"public-broadcast","url":"https://www.zdf.de/","languages":["de"],"anime":"Occasional anime/animation; catalog varies"},
+    {"id":"toggo","name":"TOGGO","category":"children","url":"https://www.toggo.de/","languages":["de"],"anime":"Animation and children's programming"},
+    {"id":"mediathekview","name":"MediathekView","category":"public-broadcast-tool","url":"https://mediathekview.de/","languages":["de"],"note":"Tool for searching public broadcaster media; use official broadcaster availability"},
+    {"id":"mediathekviewweb","name":"MediathekViewWeb","category":"public-broadcast-search","url":"https://mediathekviewweb.de/","languages":["de"],"note":"Search interface for public broadcaster libraries"},
+    {"id":"dctp","name":"dctp.tv","category":"documentary","url":"https://www.dctp.tv/","languages":["de"]},
+    {"id":"dokustreams","name":"Dokustreams","category":"documentary","url":"https://dokustreams.de/","languages":["de"],"note":"Check each item's rights and source before use"},
+    {"id":"stiftung-imai","name":"Stiftung imai","category":"video-archive","url":"https://www.imai.de/","languages":["de"]},
+    {"id":"studyflix","name":"Studyflix","category":"education","url":"https://studyflix.de/","languages":["de"]},
+    {"id":"hoerspielprojekt","name":"Hörspielprojekt","category":"audio","url":"https://www.hoerspielprojekt.de/","languages":["de"]},
+    {"id":"dw","name":"Deutsche Welle","category":"public-broadcast-education","url":"https://www.dw.com/de/","languages":["de","en"]},
+    {"id":"crunchyroll","name":"Crunchyroll","category":"anime-official","url":"https://www.crunchyroll.com/","languages":["de","ja"],"note":"Official anime service; availability and subscription vary"},
+    {"id":"anime-on-demand","name":"Anime on Demand / Crunchyroll","category":"anime-official","url":"https://www.crunchyroll.com/","languages":["de"],"note":"Anime on Demand was consolidated into Crunchyroll; use current official service"}
+  ]
+}

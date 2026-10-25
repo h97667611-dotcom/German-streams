@@ -1,35 +1,27 @@
-# German streams (Nuvio local scraper)
+# German-streams (Nuvio plugin repository)
 
-**Repository:** https://github.com/h97667611-dotcom/German-streams  
-**Visibility:** Private
-
-German-language Nuvio local-scraper starter for catalog metadata and playback of sources you own or are authorized to access.
-
-## Status
-This is an initial scaffold, not a production-ready scraper. Nuvio's exact runtime contract can vary by app release; verify provider exports against the installed Nuvio version before enabling. It intentionally does not scrape protected video hosts or resolve unauthorized stream URLs.
-
-## Features in this scaffold
-- Nuvio manifest with two provider entries (Kinoger and AniWorld)
-- Provider metadata and host configuration
-- Search/catalog helper functions
-- Explicit external-site opening only; no stream extraction
-- Documentation for implementing authorized sources
+**Manifest URL:** https://raw.githubusercontent.com/h97667611-dotcom/German-streams/main/manifest.json
 
 ## Install
-1. Open Nuvio.
-2. Go to **Settings → Local Scrapers**.
-3. Add manifest URL: `https://raw.githubusercontent.com/h97667611-dotcom/German-streams/main/manifest.json`
-4. Enable the provider(s), if your Nuvio build supports this manifest.
-5. Check provider logs and adapt exports to the installed Nuvio scraper API.
+1. Use a Nuvio build that supports JavaScript plugins (sideloaded builds may be required; app-store builds may not support plugins).
+2. In Nuvio open **Settings → Content & Discovery → Plugins** (not Addons).
+3. Add the manifest URL above, refresh, and check the repository status.
+4. The provider is currently **disabled** because this repository does not yet have a verified, authorized direct-stream API. Enable it only for testing; it returns no stream candidates.
 
-## Sources
-- Kinoger: https://kinoger.to/
-- AniWorld: https://aniworld.to/
+## Why the earlier 404/error
+The previous manifest was a custom object with a `scrapers` field, rather than Nuvio's current provider manifest format. Nuvio's plugin manifest expects a JSON array of provider objects, each with `id`, `name`, `filename`, and `supportedTypes`. This repository now uses that format and a root-level provider file.
 
-The provider modules only return catalog-site information and external links. They do not fetch, decrypt, bypass access controls, or download protected media.
+If Nuvio still reports HTTP 404, verify that the app is using this exact raw URL:
+`https://raw.githubusercontent.com/h97667611-dotcom/German-streams/main/manifest.json`
+A plugin repo must be installed under Plugins, not Addons. The installed app version must support plugins.
 
-## Development
-See [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md) and [docs/LEGAL.md](docs/LEGAL.md).
+## Source directory
+See [catalog/german-sources.json](catalog/german-sources.json) for a curated directory of official German public-service, educational, documentary, audio, and anime sources. This directory is not a scraper and does not provide stream URLs.
 
-## License
-MIT for this scaffold's original code. This does not grant rights to third-party websites, media, logos, or content.
+## Scope
+This repository does not scrape or resolve unauthorized streaming pages, bypass paywalls/access controls, or extract protected video URLs. Anime and video playback can only be added when a source provides an authorized API or direct playback endpoint and the provider can be tested against Nuvio's current runtime.
+
+## Developer reference
+- [Nuvio provider template](https://github.com/yoruix/nuvio-providers)
+- [Nuvio plugin guide](https://nuvio-wiki.duckdns.org/integrations/plugins)
+- [FMHY German / Deutsch directory](https://github.com/fmhy/FMHY/wiki/Non-Eng)
