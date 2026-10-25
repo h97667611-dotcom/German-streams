@@ -1,0 +1,33 @@
+{
+  "name": "German streams",
+  "version": "0.1.0",
+  "description": "German-language catalog references for authorized media sources.",
+  "scrapers": [
+    {
+      "id": "kinoger_catalog",
+      "name": "Kinoger Katalog",
+      "description": "Catalog reference and external site link; no protected stream extraction.",
+      "version": "0.1.0",
+      "author": "German streams",
+      "supportedTypes": ["movie", "tv"],
+      "filename": "providers/kinoger.js",
+      "enabled": true,
+      "hasSettings": true,
+      "formats": [],
+      "contentLanguage": ["de"]
+    },
+    {
+      "id": "aniwall_catalog",
+      "name": "AniWorld Katalog",
+      "description": "Catalog reference and external site link; no protected stream extraction.",
+      "version": "0.1.0",
+      "author": "German streams",
+      "supportedTypes": ["tv", "anime"],
+      "filename": "providers/aniwall.js",
+      "enabled": true,
+      "hasSettings": true,
+      "formats": [],
+      "contentLanguage": ["de"]
+    }
+  ]
+}
