@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>German Streams – Nuvio installieren</title>
+<style>
+:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:#101114;color:#f5f5f7;font:16px system-ui,sans-serif;display:grid;min-height:100vh;place-items:center;padding:22px}.card{width:min(100%,560px);background:#1c1b20;border:1px solid #343239;border-radius:24px;padding:28px}h1{margin:0 0 8px;font-size:28px}p{color:#b9b7c0;line-height:1.55}.btn{display:block;width:100%;padding:16px;border:0;border-radius:14px;background:#f5f5f7;color:#17161a;font-weight:700;font-size:17px;text-align:center;text-decoration:none;cursor:pointer;margin:12px 0}.secondary{background:#33313a;color:#fff}.url{overflow-wrap:anywhere;background:#111;padding:12px;border-radius:10px;font-size:13px;color:#c7c5cd}.note{font-size:13px}
+</style></head>
+<body><main class="card">
+<h1>German Streams</h1><p>Repository für Nuvio</p>
+<a class="btn" href="https://nuvioapp.space/account">Installieren über Nuvio Account</a>
+<button class="btn secondary" id="copy">Manifest-Link kopieren</button>
+<div class="url" id="url">https://raw.githubusercontent.com/h97667611-dotcom/German-streams/main/manifest.json</div>
+<p class="note" id="status">Falls die Nuvio-Accountseite keinen direkten Installationsdialog öffnet: Link kopieren und in Nuvio unter Einstellungen → Content &amp; Discovery → Plugins einfügen.</p>
+<p class="note">Der Provider ist aktuell deaktiviert und liefert keine Streams. Die Seite installiert keine zusätzlichen Quellen automatisch.</p>
+<script>
+const manifest='https://raw.githubusercontent.com/h97667611-dotcom/German-streams/main/manifest.json';
+document.getElementById('copy').addEventListener('click',async()=>{const s=document.getElementById('status');try{await navigator.clipboard.writeText(manifest);s.textContent='Manifest-Link kopiert! Jetzt in Nuvio einfügen.'}catch(e){s.textContent='Kopiere den angezeigten Manifest-Link manuell.'}});
+</script></main></body></html>
